@@ -15,7 +15,7 @@ Cinepiece é uma plataforma online para aficionados por filmes que desejam explo
 
 
 ## Instalação (Versão Windows 10+)
-1. Clone o repositório:\
+1. Clone o repositório:
 ```ruby
 git clone https://github.com/junior-sampaio/cinepiece.git
 ```
@@ -53,6 +53,7 @@ Antes de começar a usar a aplicação, é necessário iniciar o Redis, Sidekiq 
 2. Execute o comando `rails s` para iniciar a aplicação Rails.
 
 #### Acesso a Aplicação
+Link Local da Aplicação: [Clique aqui](http://127.0.0.1:3000)
 - Usuário: cine@admin
 - Senha: password
 
@@ -86,4 +87,4 @@ Se você tiver alguma dúvida ou sugestão, entre em contato através do email: 
 
 
 ## Licença
-Este projeto foi criado pela Oxeanbits e aprimorado por Júnior Sampaio em pró do desafio para vaga de Desenvolvedor Back-end.
+Este projeto foi criado pela Oxeanbits e aprimorado por Júnior Sampaio no desafio para vaga de Desenvolvedor Back-end.
