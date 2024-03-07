@@ -1,0 +1,18 @@
+<h1>Rate Several Movies</h1>
+
+<%= form_with(url: rate_movies_path) do |form| %>
+  <% @movies.each do |movie| %>
+    <div>
+      <%= form.label "score[#{movie.id}]", "#{movie.title}" %>
+      <% user_movie = current_user.user_movies.find_by(movie_id: movie.id) %>
+      <% if user_movie %>
+        <%= form.number_field "score[#{movie.id}]", value: user_movie.score, in: 1..10 %>
+      <% else %>
+        <%= form.number_field "score[#{movie.id}]", in: 1..10 %>
+      <% end %>
+      <%= form.hidden_field "movie_ids[]", value: movie.id %>
+    </div>
+  <% end %>
+
+  <%= form.submit "Rate Movies", class: "btn btn-primary" %>
+<% end %>

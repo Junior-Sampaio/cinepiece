@@ -13,3 +13,9 @@
 
   <%= form.submit "Create Movie" %>
 <% end %>
+<h1>Import Movies</h1>
+<%= form_tag import_movies_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import movies CSV", class: "btn btn-primary" %>
+<% end %>
+<%= flash[:alert] %>

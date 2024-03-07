@@ -1,5 +1,12 @@
 <h1>Movies</h1>
-<%= link_to "Add new", new_movie_path %>
+
+<%= link_to "Rate several movies", 'rate-movies', class: "btn btn-primary" %>
+<% if current_user.admin? %>
+  <%= link_to "Add new movie", new_movie_path %>
+<% end %>
+<div>
+  <%= flash[:notice] %>
+</div>
 <% @movies.each do |movie| %>
   <div>
     <h2><%= movie.title %></h2>
